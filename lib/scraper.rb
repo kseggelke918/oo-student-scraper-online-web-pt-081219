@@ -27,13 +27,18 @@ class Scraper
     
     social_media = profile_page.css("div.social-icon-container a").collect do |media|
       media.attribute("href").text 
-        social_media.each do ||
-          
+        social_media.each do |link|
+          if link.include?("twitter")
+            student[:twitter] = link
+          elsif link.include?("linkedin")
+            student[:linkedin] = link 
+          elsif link.include?("github")
+            student[:github] = link  
         end 
     end 
       
-      student[:twitter] = media.css("a").attribute("href")[0].text 
-      student[:linkedin] = media.css("a").attribute("href")[1].text
+      
+
       student[:github] = media.css("a").attribute("href")[2].text
       student[:blog] = media.css("a").attribute("href")[3].text
     end 
