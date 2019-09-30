@@ -5,10 +5,9 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    @name = student_hash[:name]
-    @location = student_hash[:location]
-    @@all << @name 
-    binding.pry 
+    student_hash.each do |k,v|
+      self.send(("#{k}="),v)}
+      @@all << self 
   end
 
   def self.create_from_collection(students_array)
