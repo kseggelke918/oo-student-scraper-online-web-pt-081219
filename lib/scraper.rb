@@ -16,7 +16,7 @@ class Scraper
       :location => student.css("div.card-text-container p.student-location").text 
       }
       students << student_info
-      binding.pry 
+      #binding.pry 
     end 
     students 
   end
