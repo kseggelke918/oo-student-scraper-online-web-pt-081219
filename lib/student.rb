@@ -16,7 +16,7 @@ class Student
       @name = student[:name] 
       @location = student[:location] 
     end 
-    #binding.pry   
+    binding.pry   
   end
 
   def add_student_attributes(attributes_hash)
