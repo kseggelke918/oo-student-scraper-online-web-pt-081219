@@ -25,6 +25,11 @@ class Scraper
     profile_page = Nokogiri::HTML(html)
     student = {}
     
+    profile_page.css("").each do ||
+      student = 
+      
+    end 
+    
     
   end
 
