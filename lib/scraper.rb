@@ -36,6 +36,7 @@ class Scraper
           elsif link.include?(".com")
             student[:blog] = link   
           end 
+          
       end 
   end
 
